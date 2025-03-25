@@ -21,6 +21,9 @@ Empower your server with **NightbaneManualEvents**, a plugin that puts event man
 ## Commands
 
 ### Admin Commands (Restricted to Admins)
+- `.event add <playerName>`  
+  Manually add a specific player to the Event (works while the event is closed to new participants).
+
 - `.event pause`  
   Pause or resume the event. Pausing closes it to new participants.  
   *Example Reply: "The event is now paused."*
