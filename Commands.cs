@@ -129,6 +129,7 @@ public static class Commands
         }
 
         ManualEventSystem.JoinEvent(playerEntity);
+        ctx.Reply($"Added {playerName} to the Event.");
     }
 
     [Command("gather", description: "", adminOnly: true)]
