@@ -9,6 +9,7 @@ using ProjectM;
 using ProjectM.Network;
 using Unity.Entities;
 using UnityEngine;
+using NightbaneManualEvents;
 
 public static class ManualEventSystem
 {
