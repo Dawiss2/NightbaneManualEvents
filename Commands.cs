@@ -105,6 +105,31 @@ public static class Commands
 
         ManualEventSystem.KickPlayer(playerEntity, playerName);
     }
+    [Command("add", description: "", adminOnly: true)]
+    public static void AddPlayerToEvent(ChatCommandContext ctx, string playerName)
+    {
+        if (!ManualEventSystem.EventActive)
+        {
+            ctx.Reply("No event is currently active.");
+            return;
+        }
+        Entity playerEntity = Helper.FindPlayerByName(playerName);
+
+        if (playerEntity == Entity.Null || ManualEventSystem.EventPlayers.Contains(playerEntity))
+        {
+            ctx.Reply($"Player {playerName} is already in the event or does not exist.");
+            return;
+        }
+
+        var inventory = VWorld.Server.EntityManager.GetComponentData<Equipment>(ctx.Event.SenderCharacterEntity);
+        if (!Helper.IsInventoryEmpty(inventory))
+        {
+            ctx.Reply($"Player {playerName} inventory is not empty.");
+            return;
+        }
+
+        ManualEventSystem.JoinEvent(playerEntity);
+    }
 
     [Command("gather", description: "", adminOnly: true)]
     public static void GatherEventPlayersCommand(ChatCommandContext ctx)
