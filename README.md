@@ -2,6 +2,8 @@
 
 Empower your server with **NightbaneManualEvents**, a plugin that puts event management in your hands. Whether it’s a chaotic PvP showdown or a cooperative challenge, this tool gives admins the power to start, pause, and control events with precision—while players join the action seamlessly.
 
+Example of use: https://www.youtube.com/watch?v=mJTzd9U83l0
+
 
 ## Features
 
