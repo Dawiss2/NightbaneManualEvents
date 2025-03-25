@@ -1,10 +1,10 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
 using VampireCommandFramework;
-using Unity.Collections;
 using BepInEx.Unity.IL2CPP;
 using HarmonyLib;
-using Bloody.Core;
+
+namespace NightbaneManualEvents;
 
 [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
 [BepInDependency("gg.deca.VampireCommandFramework")]
